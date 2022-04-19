@@ -1,0 +1,18 @@
+we have made the model in pytorch from scratch, three experiments were
+done in this module (0% noise, 1% noise, 5% noise) and we trained the
+PINN for around 3000 epochs saving the best model and the learned m1, 
+k4. 
+
+to make the model we treated the second order system as a system of 1st
+order differential equations. details are in the markdown text of the, 
+notebooks. 
+
+the results are: 
+-----------------------------------------------------------------------
+m1 ~ 1.07 from the data
+k4 ~ 2.13 from the data
+-----------------------------------------------------------------------
+(on average for each case)
+
+the model performs well for handling the cases of 1%, 5% noise. hence we
+can use the pinn efficiently to solve inverse problems. 

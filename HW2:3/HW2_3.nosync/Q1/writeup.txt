@@ -1,0 +1,14 @@
+it can be seen that the model is performing fairly accurately to capture the physics of the problem if the differential equations are known to us.
+we have used the traditional boundary loss terms and residual loss terms but for the x=1 conditions we have defined new loss as mse(difference in 
+fluxes, 0)+ mse(difference is predicted temperature, 0) this loss needs to be enforced strictly to ensure continuity and hence we enforce a hard 
+penalty as compared to all the other losses. 
+
+it can be noted that if we vary the number of collocation points, the residual loss is less and hence the physics can be relaxed a bit leading to 
+some deviation with the actual solution. 
+
+the actual solution is:
+
+u1(x) = 100/101 x
+u2(x) = 10000/101 x - 9900/101 
+
+which gives the interface temperature to be 0.99 ~ 1. 
